@@ -1,0 +1,21 @@
+; $Id$
+name = Busy
+description = The ultimate Drupal business theme.
+package = Core
+version = VERSION
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = css/style.css
+stylesheets[print][] = css/print.css
+
+regions[header] = Header
+regions[page_top] = Page top
+regions[help] = Help
+regions[highlight] = Highlight
+regions[content_top] = Content top
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[footer] = Footer
+regions[page_bottom] = Page bottom
+regions[page_footer] = Page footer
