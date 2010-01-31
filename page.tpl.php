@@ -77,7 +77,7 @@
             <div id="content-area">
               <?php print $breadcrumb; ?>
               <?php if ($page['highlight']): ?>
-              <div id="highlight"><?php render($page['highlight']); ?></div>
+                <div id="highlight"><?php render($page['highlight']); ?></div>
               <?php endif; ?>
               <a id="main-content"></a>
               <?php if ($tabs): ?>
@@ -85,7 +85,7 @@
               <?php endif; ?>
                 <?php print render($title_prefix); ?>
                 <?php if ($title): ?>
-                <h1<?php print $tabs ? ' class="with-tabs"' : '' ?>><?php print $title ?></h1>
+                  <h1<?php print $tabs ? ' class="with-tabs"' : '' ?>><?php print $title ?></h1>
                 <?php endif; ?>
                 <?php print render($title_suffix); ?>
               <?php if ($tabs): ?>
