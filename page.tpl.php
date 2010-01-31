@@ -81,7 +81,7 @@
               <?php endif; ?>
               <a id="main-content"></a>
               <?php if ($tabs): ?>
-              <div id="tabs-wrapper" class="clearfix">
+                <div id="tabs-wrapper" class="clearfix">
               <?php endif; ?>
                 <?php print render($title_prefix); ?>
                 <?php if ($title): ?>
