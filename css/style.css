@@ -13,6 +13,13 @@ body {
   margin: 0;
   padding: 0;
 }
+.cleardiv {
+clear:both;
+font-size:0;
+height:0;
+line-height:0;
+padding:0.01px;
+}
 
 h1 {
   font-size: 1.5em;
@@ -26,6 +33,7 @@ p {
 
 a {
   color: #1D4C7F;
+  text-decoration: none;
 }
 input, select {
   cursor: pointer;
@@ -76,8 +84,8 @@ html.js fieldset.collapsed {
  * Skip link
  */
 #skip-link a:link, #skip-link a:visited {
-  font-weight: bold; 
-  background: #fff; 
+  font-weight: bold;
+  background: #fff;
   padding: 0px 5px;
   text-decoration: none;
   font-size: 80%;
@@ -161,7 +169,7 @@ html.js fieldset.collapsed {
 }
 #site-slogan {
   font-size: 1.25em;
-  color: #3366cc;
+  color: #225F8E;
   padding-top: 80px;
   text-align: right;
 }
@@ -178,8 +186,18 @@ html.js fieldset.collapsed {
 #branding a {
   text-decoration: none;
   font-weight: normal;
-  font-size: 2em;
-  color: #3366cc;
+  font-size: 3em;
+  color: #3D77A3;
+  font-family: "calibri","arial narrow",arial,helvetica,sans-serif;
+  letter-spacing: -0.03em;
+}
+#branding img {
+  float: left;
+}
+#branding .site-title {
+   float: left;
+   padding-left: 15px;
+   padding-top: 23px;
 }
 
 #header-bottom .title-area {
@@ -233,13 +251,41 @@ html.js fieldset.collapsed {
   background: transparent url("../images/menu_expanded.gif") no-repeat left 0;
 }
 
+#navigation ul#main-menu {
+  padding: 35px 0;
+}
+#navigation ul#main-menu li {
+    background: transparent url(../images/inline_links_seperator.png) no-repeat right 0;
+    margin: 0;
+    padding: 0 0.9em 0 0.5em;
+}
+#navigation ul#main-menu li.first {
+  padding-left: 0;
+}
+#navigation ul#main-menu li.last {
+  background: none;
+}
+
+
+#navigation ul#main-menu li a {
+  font-size: 1.2em;
+  color: #8C99A3;
+}
+#navigation ul#main-menu li a.active,
+#navigation ul#main-menu li a:hover,
+#navigation ul#main-menu li a:focus {
+   color: #1D4877;
+}
+
+
+
 /**************************************/
 /*            MAIN CONTENT            */
 /**************************************/
 #container {
   width: 950px;
   margin: 7px auto 0 auto;
-  padding-top: 37px;
+  padding-top: 39px;
   background: #ffffff;
 }
 
@@ -253,15 +299,15 @@ html.js fieldset.collapsed {
   margin-bottom: 10px;
 }
 .breadcrumb {
-  font-size: 10px; 
+  font-size: 10px;
   color: #666666;
 }
 
 #content {
   float: left;
-  width: 660px;
+  width: 640px;
   margin-right: 10px;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 #content-area {
@@ -273,6 +319,10 @@ html.js fieldset.collapsed {
 #content-area .region-content {
   padding-right: 60px;
 }
+
+
+
+
 
 /**************************************/
 /*              SIDEBAR               */
@@ -300,7 +350,7 @@ div.sidebar-first {
 /*               FOOTER               */
 /**************************************/
 #page-footer {
-  background: #1E517D url("../images/footer_bg.jpg") repeat-x 0 0;
+  background: #1E517D url("../images/footer_bg.jpg") repeat-y 0 0;
   min-height: 135px;
   margin-top: 12px;
 }
@@ -342,7 +392,7 @@ div.node {
 }
 
 div.node h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
   color: #1D4C7F;
 }
 div.node h2 a, .node h2 a:link, .node h2 a:visited {
@@ -354,18 +404,29 @@ div.node p {
   color: #7A8894;
   margin-bottom: 0;
 }
+.node-teaser .node-inner .field-type-image {
+   float: left;
+   width: 170px;
+   margin: 5px 15px 0 5px;
+}
+.node-teaser .node-inner .field-type-image img {
+ width: 170px;
+}
+.node .field-type-image img {
+   width: 550px;
+}
 
 div.user-picture {
   float: left;
   margin: 0 20px 0 0;
-  padding: 3px 0 0 0;
+  padding: 3px 0 8px 0;
 }
 div.user-picture img {
   margin: 0;
   padding: 0;
   border: 0;
-  width: 75px;
-  height: 75px;
+  width: 50px;
+
 }
 div.node.node-with-author-picture .content, div.node.node-with-author-picture div.links {
   padding-left: 95px;
@@ -377,13 +438,19 @@ div.node.node-with-author-picture .comment .content, div.node.node-with-author-p
 div.node div.links, div.comment div.links {
   float: right;
 }
-div.node ul.links {
+
+div.node .links {
+  padding: 0.7em 0 0.5em;
+  font-size: 0.96em;
+}
+
+div.node ul.links,
+div.comment ul.links
+ {
   line-height: 1.75em;
-  padding: 0 1em 0 0;
+  padding: 0.5em 1em 0.4em 0;
 }
-div.node.node-teaser ul.links {
-  float: none;
-}
+
 div.node ul.links a {
   text-decoration: none;
   color: #1D4C7F;
@@ -465,7 +532,7 @@ thead th, tbody td {
 }
 thead th {
   font-weight: normal;
-  color: #1D4C7F; 
+  color: #1D4C7F;
 }
 thead th a {
   text-decoration: none;
@@ -499,6 +566,7 @@ tfoot td {
 
 ul.primary, ul.tabs.secondary {
   padding: 0 0 5px 0;
+  margin-left: 0;
   background: transparent url("../images/row_separator.png") no-repeat 0 bottom;
   border: none;
 }
@@ -527,4 +595,5 @@ ul.primary li.active a, ul.primary li.active a.active, ul.tabs.secondary li.acti
   border: none;
   background: none;
   color: #1D4C7F;
+  padding-left: 0;
 }

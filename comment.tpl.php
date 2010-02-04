@@ -61,7 +61,7 @@
   <h3<?php print $title_attributes; ?>><?php print $title ?></h3>
   <?php print render($title_suffix); ?>
 
-  <div class="comment-inner">
+  <div class="comment-inner clearfix">
     <div class="submitted">
       <?php print $permalink; ?>
       <?php
@@ -92,6 +92,6 @@
     <div class="links">
     <?php print render($content['links']) ?>
     </div>
-    <div class="clearfix"></div>
+    
   </div>
 </div>

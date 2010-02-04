@@ -6,12 +6,12 @@
         <div id="header-top">
           <div id="logo-floater">
           <?php if ($logo || $site_title): ?>
-            <?php if ($title): ?>
-              <div id="branding"><a href="<?php print $front_page ?>" title="<?php print $site_name_and_slogan ?>">
+            
+              <div id="branding" class="clearfix"><a href="<?php print $front_page ?>" title="<?php print $site_name_and_slogan ?>">
               <?php if ($logo): ?>
                 <img src="<?php print $logo ?>" alt="<?php print $site_name_and_slogan ?>" id="logo" />
               <?php endif; ?>
-              <span><?php print $site_name ?></span>
+              <div class="site-title"><?php print $site_name ?></div>
               </a></div>
             <?php else: /* Use h1 when the content title is empty */ ?>
               <h1 id="branding"><a href="<?php print $front_page ?>" title="<?php print $site_name_and_slogan ?>">
@@ -19,10 +19,10 @@
                 <img src="<?php print $logo ?>" alt="<?php print $site_name_and_slogan ?>" id="logo" />
               <?php endif; ?>
               </a></h1>
-            <?php endif; ?>
+        
           <?php endif; ?>
           </div>
-      		<div id="header-top-right"  class="">
+      		<div id="header-top-right"  class="clearfix">
             <?php if ($site_slogan): ?>
             <div id="site-slogan">
               <?php print $site_slogan ?>

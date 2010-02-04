@@ -57,7 +57,7 @@ function busy_preprocess_node(&$vars) {
     $vars['content']['links']['comment']['#links']['comments_count']['title'] = t('@num_comments', array('@num_comments' => format_plural($vars['comment_count'], '1 comment', '@count comments')));
     $vars['content']['links']['comment']['#links']['comments_count']['attributes'] = array();
   }
-  if ($vars['picture']) {
+  if (theme_get_setting('toggle_node_user_picture', 'busy') && $vars['picture']) {
     $vars['classes_array'][] = 'node-with-author-picture';
   }
 }
@@ -68,7 +68,7 @@ function busy_preprocess_node(&$vars) {
  * @see comment.tpl.php
  */
 function busy_preprocess_comment(&$vars) {
-  if ($vars['picture']) {
+  if (theme_get_setting('toggle_comment_user_picture', 'busy') && $vars['picture']) {
     $vars['classes_array'][] = 'comment-with-author-picture';
   }
 }
@@ -105,6 +105,9 @@ function busy_menu_local_tasks() {
   return $output;
 }
 
+/**
+ * Override html output of a menu tab.
+ */
 function busy_menu_local_task($variables) {
   $link = $variables['element']['#link'];
   $link_text = $link['title'];
@@ -246,6 +249,11 @@ function busy_pager($variables) {
   }
 }
 
+/**
+ * Override html output of fieldsets and add a wrapper element for fieldset
+ * content.
+ *
+ */
 function busy_fieldset($variables) {
   $element = $variables['element'];
 
