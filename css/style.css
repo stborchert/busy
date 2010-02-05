@@ -1,13 +1,10 @@
 /**************************************/
 /*              GLOBALS               */
 /**************************************/
-html {
-  font-size: 75%;
-}
 
 body {
   /*font: 12px/1.2em arial,helvetica,verdana,helvetica-neue,sans-serif; */
-  font-size: 12px;
+  font-size: 0.75em;
   font-family: arial,helvetica,verdana,helvetica-neue,sans-serif;
   color: #666666;
   margin: 0;
