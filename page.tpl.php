@@ -1,46 +1,46 @@
 <?php
 // $Id$
 ?>
-	  <div id="container" class="">
+    <div id="container">
       <div id="header">
         <div id="header-top">
           <div id="logo-floater">
-          <?php if ($logo || $site_title): ?>
-            
-              <div id="branding" class="clearfix">
-                <a href="<?php print $front_page ?>" title="<?php print $site_name_and_slogan ?>">
-                  <?php if ($logo): ?>
-                    <img src="<?php print $logo ?>" alt="<?php print $site_name_and_slogan ?>" id="logo" />
-                  <?php endif; ?>
-                  <span class="site-title"><?php print $site_name ?></span>
-                </a>
-              </div>
-            <?php else: /* Use h1 when the content title is empty */ ?>
-              <h1 id="branding"><a href="<?php print $front_page ?>" title="<?php print $site_name_and_slogan ?>">
-              <?php if ($logo): ?>
+            <?php if ($logo || $site_title): ?>
+            <div id="branding" class="clearfix">
+              <a href="<?php print $front_page ?>" title="<?php print $site_name_and_slogan ?>">
+                <?php if ($logo): ?>
                 <img src="<?php print $logo ?>" alt="<?php print $site_name_and_slogan ?>" id="logo" />
-              <?php endif; ?>
-              </a></h1>
-        
-          <?php endif; ?>
+                <?php endif; ?>
+                <span class="site-title"><?php print $site_name ?></span>
+              </a>
+            </div>
+            <?php else: /* Use h1 when the content title is empty */ ?>
+            <h1 id="branding">
+              <a href="<?php print $front_page ?>" title="<?php print $site_name_and_slogan ?>">
+                <?php if ($logo): ?>
+                <img src="<?php print $logo ?>" alt="<?php print $site_name_and_slogan ?>" id="logo" />
+                <?php endif; ?>
+              </a>
+            </h1>
+            <?php endif; ?>
           </div>
-      		<div id="header-top-right"  class="clearfix">
+          <div id="header-top-right" class="clearfix">
             <?php if ($site_slogan): ?>
             <div id="site-slogan">
               <?php print $site_slogan ?>
             </div>
             <?php endif; ?>
-      		</div>
+          </div>
         </div>
         <div id="header-bottom">
-      		<div id="header-bottom-left">&nbsp;</div>
-      		<div id="header-bottom-right">
+          <div id="header-bottom-left">&nbsp;</div>
+          <div id="header-bottom-right">
             <div class="title-area">
               <h2>This is the Ultimate Drupal Corporate Theme "Busy"</h2>
               <a class="read-more" href=".">More information</a>
             </div>
-      		</div>
-      		<div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
         </div>
       </div>
       <div id="main-wrapper">
@@ -68,7 +68,7 @@
         </div> 
         -->
         <div id="main">
-          <div id="content">
+          <div id="content"<?php print ($main_menu ? ' class="has-main-menu"' : ''); ?>>
             <?php if ($main_menu): ?>
             <div id="navigation">
               <div class="section">
@@ -113,7 +113,6 @@
         </div>
       </div>
       <div class="clearfix"></div>
-      <!-- Der Footer muss Block-Inhalt bekommen. Wir müssen schauen, wie der auch ohne Inhalt bzw. nur dem Standard entprechend aussieht.  -->
       <div id="page-footer" class="clearfix">
         <?php print render($page['footer']); ?>
         <div class="clearfix"></div>

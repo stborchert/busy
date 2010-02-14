@@ -377,10 +377,12 @@ background: url("../images/bg-shadow-bottom-right.jpg") no-repeat 953px bottom;
   padding-right: 10px;
   width: 650px; 
   padding-left: 30px; 
+  min-height: 450px;
+  height: auto !important;
+  height: 450px;
+}
+#content.has-main-menu {
   background: url(../images/main-menu-bg.jpg) no-repeat -70px -7px;
-   min-height: 450px;
-   height: auto !important;
-   height: 450px;
 }
 
 #content-area {
@@ -597,10 +599,10 @@ div.user-picture img {
   width: 50px;
 
 }
-div.node.node-with-author-picture .content, div.node.node-with-author-picture div.links {
+div.node.has-author-picture .content, div.node.has-author-picture div.links {
   padding-left: 95px;
 }
-div.node.node-with-author-picture .comment .content, div.node.node-with-author-picture div.links div.links {
+div.node.has-author-picture .comment .content, div.node.has-author-picture div.links div.links {
   padding-left: 0;
 }
 
@@ -671,11 +673,11 @@ div.comment {
   margin-bottom: 2em;
   padding-bottom: 1px;
 }
-div.node div.comment.comment-with-author-picture .content, div.node div.comment.comment-with-author-picture div.links {
+div.node div.comment.has-author-picture .content, div.node div.comment.has-author-picture div.links {
   padding-left: 95px;
 }
 
-div.comment.comment-with-author-picture .submitted {
+div.comment.has-author-picture .submitted {
   padding-left: 95px;
   margin-bottom: 1em;
 }
