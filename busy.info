@@ -16,8 +16,7 @@ regions[highlight] = Highlight
 regions[content_top] = Content top
 regions[content] = Content
 regions[sidebar_first] = Sidebar first
-regions[footer] = Footer
 regions[page_bottom] = Page bottom
-regions[page_footer] = Page footer
+regions[footer] = Footer
 
 

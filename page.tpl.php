@@ -7,12 +7,14 @@
           <div id="logo-floater">
           <?php if ($logo || $site_title): ?>
             
-              <div id="branding" class="clearfix"><a href="<?php print $front_page ?>" title="<?php print $site_name_and_slogan ?>">
-              <?php if ($logo): ?>
-                <img src="<?php print $logo ?>" alt="<?php print $site_name_and_slogan ?>" id="logo" />
-              <?php endif; ?>
-              <div class="site-title"><?php print $site_name ?></div>
-              </a></div>
+              <div id="branding" class="clearfix">
+                <a href="<?php print $front_page ?>" title="<?php print $site_name_and_slogan ?>">
+                  <?php if ($logo): ?>
+                    <img src="<?php print $logo ?>" alt="<?php print $site_name_and_slogan ?>" id="logo" />
+                  <?php endif; ?>
+                  <span class="site-title"><?php print $site_name ?></span>
+                </a>
+              </div>
             <?php else: /* Use h1 when the content title is empty */ ?>
               <h1 id="branding"><a href="<?php print $front_page ?>" title="<?php print $site_name_and_slogan ?>">
               <?php if ($logo): ?>
@@ -99,7 +101,6 @@
                 <?php print render($page['content']); ?>
               </div>
               <?php print $feed_icons ?>
-              <?php print render($page['footer']) ?>
             </div>
           </div>
           <?php if ($page['sidebar_first']): ?>
@@ -113,8 +114,8 @@
       </div>
       <div class="clearfix"></div>
       <!-- Der Footer muss Block-Inhalt bekommen. Wir müssen schauen, wie der auch ohne Inhalt bzw. nur dem Standard entprechend aussieht.  -->
-      <div id="page-footer">
-        <?php print render($page['page_footer']); ?>
+      <div id="page-footer" class="clearfix">
+        <?php print render($page['footer']); ?>
         <div class="clearfix"></div>
       </div>
     </div>

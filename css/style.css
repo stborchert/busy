@@ -47,6 +47,11 @@ fieldset {
   border: none;
   background: transparent url("../images/row_separator.png") no-repeat 0 bottom;
 }
+legend{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
 fieldset.collapsed {
   background-image: none;
 }
@@ -54,9 +59,28 @@ fieldset legend, fieldset legend a {
   color: #1D4C7F;
 }
 html.js fieldset.collapsible legend a {
+  text-decoration: none;
+  background: none;
+}
+html.js fieldset.collapsible legend span.fieldset-title {
   padding-left: 24px;
   background: transparent url("../images/fieldset_legend.png") no-repeat left 0;
-  text-decoration: none;
+}
+html.js fieldset.collapsible legend a,
+html.js fieldset.collapsible legend span.fieldset-title {
+  width: 98%;
+}
+html.js fieldset.collapsible legend a,
+html.js fieldset.collapsible legend a span.fieldset-title {
+  display: block;
+  height: 1.5em;
+  position: absolute;
+  left: 0;
+  top: 0px\9;
+  line-height: 1.5em;
+}
+html.js fieldset.collapsed legend a {
+  background: transparent url("../images/row_separator.png") no-repeat 0 bottom;
 }
 fieldset .fieldset-content {
   padding: 1em 1em 0 2em;
@@ -64,6 +88,9 @@ fieldset .fieldset-content {
 }
 html.js fieldset.collapsed {
   margin-bottom: 2em;
+}
+html.js fieldset.collapsed legend span.fieldset-title {
+  display: inline;
 }
 
 .right {
@@ -74,14 +101,59 @@ html.js fieldset.collapsed {
   background: f7f7f7;
   margin: 0;
    padding-bottom: 80px;
-  padding-top: 50px;
+  padding-top: 40px;
 }
+/* Wrappers for Background images and shadows */
 #wrapper-inner-top {
   background: #9AA1A7 url("../images/bg-main-top-low.jpg") repeat-x 0 0;
 }
 #wrapper-inner-bottom {
   background: url("../images/bg-main-bottom.jpg") repeat-x 0 bottom;
 }
+#wrapper-inner-color-bar {
+  background: url("../images/bg-color-bar-low.jpg") repeat-x 0 160px; 
+}
+#wrapper-inner-shadow-over-left {
+  width: 990px;
+  margin: auto;
+  background: url("../images/bg-shadow-over-left.jpg") no-repeat 30px 2px;
+  
+}
+#wrapper-inner-shadow-over-right {
+  background: url("../images/bg-shadow-over-right.jpg") no-repeat 893px 2px;
+  padding-top: 10px;
+}
+#wrapper-inner-shadow-repeated-left {   
+  background: url("../images/bg-shadow-repeated-left.jpg") repeat-y 8px 0;
+}
+#wrapper-inner-shadow-top-left {
+  background: url("../images/bg-shadow-top-left.jpg") no-repeat 8px 0; 
+}
+#wrapper-inner-shadow-color-bar-left {
+  background: url("../images/bg-shadow-color-bar-left.jpg") no-repeat 8px 150px; 
+}
+#wrapper-inner-shadow-middle-left {
+  background: url("../images/bg-shadow-middle-left.jpg") no-repeat 8px 296px;
+}
+#wrapper-inner-shadow-bottom-left {
+background: url("../images/bg-shadow-bottom-left.jpg") no-repeat 8px bottom;
+}
+#wrapper-inner-shadow-repeated-right {
+  background: url("../images/bg-shadow-repeated-right.jpg") repeat-y 953px 0;
+}
+#wrapper-inner-shadow-top-right {
+  background: url("../images/bg-shadow-top-right.jpg") no-repeat 953px 0; 
+}
+#wrapper-inner-shadow-color-bar-right {
+  background: url("../images/bg-shadow-color-bar-right.jpg") no-repeat 953px 150px; 
+}
+#wrapper-inner-shadow-middle-right {
+  background: url("../images/bg-shadow-middle-right.jpg") no-repeat 953px 296px;
+}
+#wrapper-inner-shadow-bottom-right {
+background: url("../images/bg-shadow-bottom-right.jpg") no-repeat 953px bottom;
+}
+
 #main-wrapper {
   margin-bottom: 2em;
 }
@@ -114,31 +186,7 @@ html.js fieldset.collapsed {
   z-index: 1000;
 }
 
-#search-block-form input[type=text],
-.block #user-login-form input[type=text],
-.block #user-login-form input[type=password]
-{
-  background: #F0F3F7 url("../images/search_bg.gif") no-repeat 0 bottom;
-  border: none;
-  width: 120px;
-}
-.block #user-login-form .form-item {
-  margin: 4px 0;
-}
-.block #user-login-form label {
-  font-weight: normal;
-  float: left;
-  padding: 4px 4px 0 0;
-  width: 64px;
-}
-.block #user-login-form a {
-  color: #ffffff;
-  text-decoration: none;
-}
 
-.contextual-links-region-active {
-  outline-color: #1D4C7F;
-}
 
 /**************************************/
 /*              HEADER                */
@@ -157,6 +205,7 @@ html.js fieldset.collapsed {
 #header-bottom {
   height: 146px;
   background: transparent url("../images/header_bottom_bg.jpg") no-repeat 0 0;
+  /*background: transparent url("../images/header-image-faces.jpg") no-repeat 0 0;*/ 
 }
 #header-bottom-left {
   float: left;
@@ -187,7 +236,7 @@ html.js fieldset.collapsed {
   float: left;
   width: 510px;
   padding: 0 40px;
-  margin: 10px 10px 0 0;
+  margin: 15px 10px 0 0;
 }
 #logo-floater h1 {
   margin: 0;
@@ -223,11 +272,11 @@ html.js fieldset.collapsed {
 /**************************************/
 /*             NAVIGATION             */
 /**************************************/
-#block-block-1 {
-  background: transparent url("../images/navigation_background.png") repeat-x 0 0;
-  
+#wrapper #container #block-block-1 {
+  background: transparent url("../images/navigation_background.png") repeat-x 0 0;  
   color: #B6D8F3;
   line-height: 1.1;
+  padding-left: 1.5em;
 }
 #block-block-1 .content {
    padding-left: 17px;
@@ -270,10 +319,10 @@ html.js fieldset.collapsed {
 }
 
 #navigation ul#main-menu {
-  padding: 35px 0;
+ 
 }
 #navigation ul#main-menu li {
-    background: transparent url(../images/inline_links_seperator.png) no-repeat right 0;
+    background: transparent url(../images/main-menu-separator-2.jpg) no-repeat right -1px;
     margin: 0;
     padding: 0 0.9em 0 0.5em;
 }
@@ -287,12 +336,12 @@ html.js fieldset.collapsed {
 
 #navigation ul#main-menu li a {
   font-size: 1.2em;
-  color: #8C99A3;
+  color: #6D7E8F;
 }
 #navigation ul#main-menu li a.active,
 #navigation ul#main-menu li a:hover,
 #navigation ul#main-menu li a:focus {
-   color: #1D4877;
+   color: #0B72B7;
 }
 
 
@@ -302,8 +351,8 @@ html.js fieldset.collapsed {
 /**************************************/
 #container {
   width: 950px;
-  margin: 7px auto 0 auto;
-  padding-top: 39px;
+  margin: 0 auto 0 auto;
+  padding-top: 29px;
   background: #ffffff;
 }
 
@@ -314,7 +363,7 @@ html.js fieldset.collapsed {
   padding-top: 10px;
 }
 #navigation {
-  padding-top: 30px;
+  padding-top: 14px;
   margin-bottom: 10px;
 }
 .breadcrumb {
@@ -324,20 +373,98 @@ html.js fieldset.collapsed {
 
 #content {
   float: left;
-  width: 640px;
-  margin-right: 10px;
-  padding-left: 40px;
+  display: inline;
+  padding-right: 10px;
+  width: 650px; 
+  padding-left: 30px; 
+  background: url(../images/main-menu-bg.jpg) no-repeat -70px -7px;
+   min-height: 450px;
+   height: auto !important;
+   height: 450px;
 }
 
 #content-area {
   float: left;
-  width: 620px;
-  padding-left: 40px;
-  margin-right: 10px;
-  padding-top: 10px;
+  display: inline;  
+  padding-left: 30px;
+  padding-right: 10px;
+  padding-top: 55px;
 }
 #content-area .region-content {
-  padding-right: 60px;
+  padding-right: 50px;
+}
+/**************************************/
+/*            FORMS                   */
+/**************************************/
+.sidebar-first form#user-login-form input,
+#page-footer form#user-login-form input {   
+  float: left;
+}
+.sidebar-first form#user-login-form label,
+#page-footer form#user-login-form label {
+  float: right;
+  font-weight: normal;
+  text-align: left;
+  width: 75px;
+  padding-left: 5px;
+}
+#page-footer form#user-login-form label {
+  font-size: 0.93em;
+}
+form#user-login-form .item-list,
+form#user-login-form .form-item {
+  clear: both;
+}
+.sidebar-first form#user-login-form .form-item,
+ {
+    padding-top: 8px;
+}
+#page-footer form#user-login-form .form-item {
+  padding: 8px 0 0;
+}
+.sidebar-first form#user-login-form input#edit-submit,
+#page-footer form#user-login-form input#edit-submit {
+  clear: both;
+  padding: 0 0.3em;
+  margin-top: 8px;
+}
+#search-block-form input[type=text],
+.sidebar-first #user-login-form input[type=text],
+.sidebar-first #user-login-form input[type=password],
+{
+  background: #F0F3F7 url("../images/search_bg.gif") no-repeat 0 bottom;
+  border: none;
+  width: 120px;
+  padding-left: 0;
+  padding-right: 0;
+}
+#page-footer #user-login-form input[type=text],
+#page-footer #user-login-form input[type=password] {
+  background: #F0F3F7 url("../images/input-bg-dark.jpg") no-repeat center bottom;
+  border: none;
+  width: 120px;
+  padding-left: 0;
+  padding-right: 0;
+}
+#page-footer #block-user-login h2 {
+  margin-bottom: 3px;
+}
+
+.sidebar-first #user-login-form a {
+  color: #6C8497;
+  text-decoration: none;
+  font-size: 0.93em;
+}
+.sidebar-first #user-login-form ul {
+  padding-left: 0;
+  padding-top: 0.5em;
+}
+
+.contextual-links-region-active {
+  outline-color: #1D4C7F;
+}
+#page-footer #user-login-form .item-list {
+  display: none;
 }
 
 
@@ -349,23 +476,28 @@ html.js fieldset.collapsed {
 /**************************************/
 #wrapper #container .sidebar {
   float: left;
+  display: inline;
   width: 240px;
   padding: 0 0 0 20px;
   margin: 24px 0 12px 0;
   position:relative;
-  z-index:2;
-}
+  z-index:2; 
+} 
 div.sidebar-first {
   margin-right: 0;
 }
 
 #wrapper #container .sidebar .block {
   margin:0 0 1.5em;
-  padding: 1.5em;
+  padding: 1.5em 1.5em 1.5em 0.4em;
   overflow: hidden;
 }
 #sidebar-first .block {
   padding:0 15px 0 0;
+}
+.block h2 {
+  font-size: 1.25em;
+  color: #4A6BAB;
 }
 
 /**************************************/
@@ -374,7 +506,10 @@ div.sidebar-first {
 #page-footer {
   background: #1E517D url("../images/footer_bg.jpg") repeat-y 0 0;
   min-height: 135px;
+   height: auto !important;
+   height: 135px;
   margin-top: 12px;
+  padding-bottom: 10px;
   clear: both;
   width: 100%;
 }
@@ -386,8 +521,9 @@ div.sidebar-first {
   color: #ffffff;
 }
 #page-footer .block h2 {
-  font-size: 100%;
-  font-weight: normal;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
 }
 #page-footer .block input {
   font-size: 100%;
@@ -411,23 +547,31 @@ input[type="text"], input[type="password"] {
 
 div.node {
   background: transparent url("../images/row_separator.png") no-repeat 0 bottom;
-  padding-bottom: 1em;
-  margin-bottom: 2em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1.3em;
 }
 
 div.node h2 {
   font-size: 1.5em;
   color: #1D4C7F;
+  padding: 0.7em 0 0.7em;
+  margin: 0;
 }
 div.node h2 a, .node h2 a:link, .node h2 a:visited {
   color: #1D4C7F;
   text-decoration: none;
   font-weight: normal;
 }
-div.node,
 div.node p {
   color: #6C8497;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0.5em 0;
+}
+.node .content {
+ 
+}
+.node-teaser {
+  margin-bottom: 0.5em;
 }
 .node-teaser .node-inner .field-type-image {
    float: left;
@@ -591,7 +735,7 @@ tfoot td {
 
 ul.primary, ul.tabs.secondary {
   padding: 0 0 5px 0;
-  margin-left: 0;
+  margin-left: -5px;
   background: transparent url("../images/row_separator.png") no-repeat 0 bottom;
   border: none;
 }
@@ -608,17 +752,15 @@ ul.primary li a, ul.tabs.secondary li a {
   color: #788897;
   background: none;
   border: none;
-  padding: 4px 10px;
+  padding: 4px 8px 4px 6px;
   margin: 0;
 }
 ul.primary li a:hover, ul.tabs.secondary li a:hover {
-  color: #1D4C7F;
+  color: #0B72B7;
   background: none;
-  border: none;
 }
 ul.primary li.active a, ul.primary li.active a.active, ul.tabs.secondary li.active a, ul.tabs.secondary li.active a.active {
   border: none;
+  color: #0B72B7;
   background: none;
-  color: #1D4C7F;
-  padding-left: 0;
 }

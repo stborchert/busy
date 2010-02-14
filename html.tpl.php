@@ -47,14 +47,41 @@
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="wrapper">
     <div id="wrapper-inner-top">
-    <div id="wrapper-inner-bottom">
-      <div id="skip-link">
-      <a href="#main-content"><?php print t('Skip to main content'); ?></a>
-    </div>
-    <?php print $page_top; ?>
-    <?php print $page; ?>
-    <?php print $page_bottom; ?>
-    </div>
+      <div id="wrapper-inner-bottom">
+        <div id="wrapper-inner-color-bar">
+          <div id="wrapper-inner-shadow-over-left">
+            <div id="wrapper-inner-shadow-over-right">
+              <div id="wrapper-inner-shadow-repeated-left">
+                <div id="wrapper-inner-shadow-top-left">
+                  <div id="wrapper-inner-shadow-color-bar-left">
+                    <div id="wrapper-inner-shadow-middle-left">       
+                      <div id="wrapper-inner-shadow-bottom-left">
+                        <div id="wrapper-inner-shadow-repeated-right">
+                          <div id="wrapper-inner-shadow-top-right">
+                            <div id="wrapper-inner-shadow-color-bar-right">
+                              <div id="wrapper-inner-shadow-middle-right">       
+                                <div id="wrapper-inner-shadow-bottom-right">
+             
+                                  <div id="skip-link">
+                                    <a href="#main-content"><?php print t('Skip to main content'); ?></a>
+                                  </div>
+                                  <?php print $page_top; ?>
+                                  <?php print $page; ?>
+                                  <?php print $page_bottom; ?>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>

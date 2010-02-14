@@ -259,7 +259,7 @@ function busy_fieldset($variables) {
 
   $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
-    $output .= '<legend>' . $element['#title'] . '</legend>';
+    $output .= '<legend><span class="fieldset-title">' . $element['#title'] . '</span></legend>';
   }
   $output .= '<div class="fieldset-content">' . "\n";
   if (!empty($element['#description'])) {
