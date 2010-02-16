@@ -425,7 +425,9 @@ form#user-login-form .form-item {
   padding: 8px 0 0;
 }
 .sidebar-first form#user-login-form input#edit-submit,
-#page-footer form#user-login-form input#edit-submit {
+#page-footer form#user-login-form input#edit-submit,
+.sidebar-first form#user-login-form input#edit-submit-2,
+#page-footer form#user-login-form input#edit-submit-2  {
   clear: both;
   padding: 0 0.3em;
   margin-top: 8px;
@@ -534,6 +536,9 @@ div.sidebar-first {
 #container textarea, #container input {
   padding: 4px 5px 2px 5px;
   margin: 0 0 4px 0;
+}
+#container input.form-submit {
+  padding: 0 0.3em;
 }
 input[type="text"], input[type="password"] {
   cursor: text;
